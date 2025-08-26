@@ -1490,3 +1490,17 @@ body {
         padding: 10px 2px;
     }
 }
+p,
+.section-description,
+.showcase-desc,
+.about-description,
+.about-text-secondary,
+.service-description,
+.custom-quote p,
+.contact-intro,
+.form-intro,
+.showcase-item:not(.showcase-title):not(.showcase-desc),
+.tab-content#instagram .showcase-desc,
+.tab-content#video .showcase-desc {
+    text-align: justify;
+}
