@@ -1490,17 +1490,102 @@ body {
         padding: 10px 2px;
     }
 }
-p,
-.section-description,
-.showcase-desc,
-.about-description,
-.about-text-secondary,
-.service-description,
-.custom-quote p,
-.contact-intro,
-.form-intro,
-.showcase-item:not(.showcase-title):not(.showcase-desc),
-.tab-content#instagram .showcase-desc,
+/* Justify all content text, but not headings */
+p,.section-description,.showcase-desc,.about-description,.about-text-secondary,.service-description,.custom-quote p,.contact-intro,.form-intro,.showcase-item:not(.showcase-title):not(.showcase-desc),.tab-content#instagram .showcase-desc,
 .tab-content#video .showcase-desc {
     text-align: justify;
+}
+/* Skills Tools Grid - 2 large logos in first row, 3 small logos in second row */
+.skills-tools-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 24px;
+    width: 100%;
+    max-width: 420px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.tools-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.tool-logo {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(107,68,35,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 12px;
+    margin: 0 8px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid rgba(107,68,35,0.08);
+}
+
+.tool-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.tool-name {
+    font-size: 1rem;
+    color: #6b4423;
+    font-weight: 500;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.tool-large {
+    width: 120px;
+    height: 120px;
+    padding: 24px 0;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 18px rgba(107,68,35,0.10);
+}
+
+.tool-small {
+    width: 80px;
+    height: 80px;
+    padding: 12px 0;
+    font-size: 0.95rem;
+}
+
+.tool-logo:hover {
+    box-shadow: 0 8px 24px rgba(153, 69, 0, 0.355);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .skills-tools-grid {
+        max-width: 100%;
+    }
+    .tools-row {
+        gap: 10px;
+    }
+    .tool-large {
+        width: 90px;
+        height: 90px;
+        padding: 16px 0;
+    }
+    .tool-small {
+        width: 60px;
+        height: 60px;
+        padding: 8px 0;
+    }
+    .tool-logo img {
+        width: 32px;
+        height: 32px;
+    }
 }
